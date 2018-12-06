@@ -1,0 +1,29 @@
+<!-- <div *ngFor="let item of formData">
+    <div style="padding-top:10px;">
+        <div class="row" style="float: left;width:10%;">
+            <label>{{item.label}}</label>
+        </div>
+        <div style="padding-left: 12%">
+            <input [disabled]="true" placeholder="{{item.content}}">
+        </div>
+    </div>
+</div> -->
+
+<div *ngFor="let item of formData">
+    <div *ngIf="item.type=='string'" style="padding-top:10px;">
+        <div class="row" style="float: left;width:10%;">
+            <label>{{item.label}}</label>
+        </div>
+        <div style="padding-left: 12%">
+            <input [disabled]="true" placeholder="{{item.content}}">
+        </div>
+    </div>
+    <div *ngIf="item.type=='component'" style="padding-top:10px;">
+        <div class="row" style="float: left;width:10%;">
+            <label>{{item.label}}</label>
+        </div>
+        <div style="padding-left: 12%">
+            <embed-comp [inputData]="item"></embed-comp>
+        </div>
+    </div>
+</div>
