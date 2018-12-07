@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
+import { PrettyButtonComponent } from '../../common/pretty-button.component';
 
 @Component({
   selector: 'otis-cindy',
@@ -7,8 +8,25 @@ import { ActivatedRoute, Params } from '@angular/router';
 })
 export class ChildOtisComponent implements OnInit {
   username: string;
-  constructor() {}
+  formData: any;
+  constructor(private route: ActivatedRoute) {}
   ngOnInit() {
-      this.username = "OtisChan";
+    this.username = "OtisChan";
+    this.formData = [
+      {
+        label:"test",
+        type: "string",
+        content:"Test"
+      },
+      {
+        label:"buttonA",
+        type: "component",
+        content:PrettyButtonComponent
+      }
+    ];
+    // alert("FirstChildComponent init");
+  }
+  ngOnDestroy(){
+    // alert("FirstChildComponent destroy");
   }
 }

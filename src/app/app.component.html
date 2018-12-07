@@ -3,32 +3,35 @@
   <h1>
     {{ title }}!
   </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
 </div>
-<button type="button" (click)="buttonClicked()">
-  Get in first-child.
-</button>
 
-<h3>
-  master name: {{masterName}}
-</h3>
+<div>
+  <button type="button" (click)="routeHomeClicked()">
+    Home
+  </button>
+  <button type="button" (click)="routeFatherClicked()">
+    Router Father
+  </button>
+  <button type="button" (click)="routeChildClicked()">
+    Router Child
+  </button>
+</div>
 
-<button type="button" (click)="AClicked()">
-  button A
-</button>
-<button type="button" (click)="BClicked()">
-  button B
-</button>
-<button type="button" (click)="CClicked()">
-  button C
-</button>
-<button type="button" (click)="DClicked()">
-  button D
-</button>
+<div>
+  <button type="button" (click)="AClicked()">
+    button A
+  </button>
+  <button type="button" (click)="BClicked()">
+    button B
+  </button>
+  <button type="button" (click)="CClicked()">
+    button C
+  </button>
+  <button type="button" (click)="DClicked()">
+    button D
+  </button>
+</div>
 
-<hr>
-<input-template [inputData]="input"></input-template>
+<!-- <input-template [inputData]="input"></input-template> -->
 
-<form-template [formData]="formData"></form-template>
-
-<!-- <pretty-button></pretty-button> -->
+<router-outlet></router-outlet>

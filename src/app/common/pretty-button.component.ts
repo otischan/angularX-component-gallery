@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { CountService } from "./count.service";
 
 @Component({
   selector: 'pretty-button',
@@ -6,10 +7,10 @@ import { Component, Input } from '@angular/core';
 })
 export class PrettyButtonComponent {
     buttonName:any;
-  constructor() {
+  constructor(private countClickService:CountService) {
   }
 
   buttonClicked(){
-      alert("Pretty Button Clicked.");
+      this.countClickService.countEvent.emit("clicked");
   }
 }
