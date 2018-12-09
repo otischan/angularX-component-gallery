@@ -13,4 +13,8 @@ export class PrettyButtonComponent {
   buttonClicked(){
       this.countClickService.countEvent.emit("clicked");
   }
+
+  otis2cindy(){
+      this.countClickService.messageEvent.emit("cindy");
+  }
 }

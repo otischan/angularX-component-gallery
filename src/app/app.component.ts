@@ -29,11 +29,11 @@ export class AppComponent {
   routeHomeClicked(){
     this.router.navigate([""]);
   }
-  routeFatherClicked() {
-    this.router.navigate(["settings/"]);
-  }
-  routeChildClicked() {
+  routeOtisClicked() {
     this.router.navigate(["settings/otis/"]);
+  }
+  routeCindyClicked() {
+    this.router.navigate(["settings/cindy/"]);
   }
 
   AClicked() {

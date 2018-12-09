@@ -16,10 +16,10 @@ export class ChildOtisComponent implements OnInit {
       {
         label:"test",
         type: "string",
-        content:"Test"
+        content:"Otis Button"
       },
       {
-        label:"buttonA",
+        label:"button Otis",
         type: "component",
         content:PrettyButtonComponent
       }
@@ -28,5 +28,6 @@ export class ChildOtisComponent implements OnInit {
   }
   ngOnDestroy(){
     // alert("FirstChildComponent destroy");
+    console.warn("Otis destroy");
   }
 }

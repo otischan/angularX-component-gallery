@@ -4,4 +4,7 @@ import { Injectable, Output, EventEmitter } from '@angular/core';
 export class CountService{
     @Output()
     countEvent:any = new EventEmitter();
+
+    @Output()
+    messageEvent:any = new EventEmitter();
 }
